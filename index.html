@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>CLOCK</title>
+</head>
+
+<body>
+    <div class="col-12 any">
+        <div class="row text-center">
+            <div class="col-3 hours "><span id="hours">0</span></div>
+            <div class="col-1 sprator">:</div>
+            <div class="col-3 min"><span id="min">0</span></div>
+            <div class="col-1 sprator">:</div>
+            <div class="col-3 sec"><span id="sec">0</span></div>
+        </div>
+
+    </div>
+</body>
+<script>
+    let hours = document.querySelector("#hours")
+    let min = document.querySelector("#min")
+    let sec = document.querySelector("#sec")
+    let hz = document.querySelector("#h-zero")
+    let minz = document.querySelector("#min-zero")
+    let secz = document.querySelector("#sec-zero")
+        // var datetime =
+        //     currentdate.getHours() + ":" +
+        //     currentdate.getMinutes() + ":" +
+        //     currentdate.getSeconds();
+    setInterval(function() {
+        var cdate = new Date();
+        hours.textContent = cdate.getHours()
+        min.textContent = cdate.getMinutes()
+        sec.textContent = cdate.getSeconds()
+        sec.textContent = cdate.getSeconds()
+    }, 1000);
+</script>
+
+</html>
